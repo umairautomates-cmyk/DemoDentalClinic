@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+    EDITING GUIDE
+    Every piece of clinic-specific information is a placeholder wrapped in
+    <span class="ph">[...]</span>. Search this file for class="ph" to find and
+    replace each one. Remove the span (and its dotted underline) once the real
+    value is in place.
+  -->
+  <title>[Dental Clinic Name] | Dentist in [City] – General, Cosmetic &amp; Orthodontic Care</title>
+  <meta name="description" content="[Dental Clinic Name] is a dental clinic in [City, Country] offering general dentistry, teeth cleaning, teeth whitening, crowns, fillings, braces and clear aligners. Request an appointment online.">
+  <meta name="theme-color" content="#2f6f6d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[Dental Clinic Name] | Dentist in [City]">
+  <meta property="og:description" content="Personalized dental care in a welcoming environment. Request an appointment online.">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-14 14Z"/><path d="M5 19c3-4 6-6.5 10-9"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 5 6v5.5c0 4.2 2.8 7.6 7 9 4.2-1.4 7-4.8 7-9V6l-7-2.5Z"/><path d="m9 12 2.2 2.2L15.2 10"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 4c.6 4.2 3.8 7.4 8 8-4.2.6-7.4 3.8-8 8-.6-4.2-3.8-7.4-8-8 4.2-.6 7.4-3.8 8-8Z"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 4 8 4.5-8 4.5-8-4.5L12 4Z"/><path d="m4 13 8 4.5 8-4.5"/></symbol>
+      <symbol id="i-align" viewBox="0 0 24 24"><path d="M4 9c2.5 2 5.2 3 8 3s5.500-1 8-3"/><path d="M7 10.800v3M12 12v3M17 10.800v3"/><path d="M4 15c2.500 2 5.200 3 8 3s5.500-1 8-3"/></symbol>
+      <symbol id="i-plan" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4v2.500h6V4M9 11h6M9 15h4"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 12a7.500 7.500 0 0 1-11 6.600L4.500 20l1.300-4.200A7.500 7.500 0 1 1 20 12Z"/><path d="M9 11h6M9 14h3.500"/></symbol>
+      <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M6 11V8.500A2.500 2.500 0 0 1 8.500 6h7A2.500 2.500 0 0 1 18 8.500V11"/><path d="M4 12.500a2 2 0 0 1 4 0V15h8v-2.500a2 2 0 0 1 4 0V18H4v-5.500ZM6 18v2M18 18v2"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5.500" width="16" height="15" rx="2.500"/><path d="M4 10h16M8.500 3.500v4M15.500 3.500v4"/><path d="m9.500 15 1.800 1.800 3.400-3.600"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21Z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.500 4h3l1.500 4-2 1.500a11 11 0 0 0 5.500 5.500l1.500-2 4 1.500v3a2 2 0 0 1-2.200 2A16 16 0 0 1 4.500 6.200 2 2 0 0 1 6.500 4Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.500" y="5.500" width="17" height="13" rx="2.500"/><path d="m4.500 7.500 7.500 6 7.500-6"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.500"/><path d="M12 7.500V12l3 2"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.800"/><path d="M4.500 20.500c1.200-3.600 4-5.500 7.500-5.500s6.300 1.900 7.500 5.500"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 4 2.400 5 5.400.700-4 3.800 1 5.400L12 16.300 7.200 18.900l1-5.400-4-3.800 5.400-.700L12 4Z"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="[Dental Clinic Name] – home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" /><path d="M11 21c2.600 4 5.600 6 9 6s6.400-2 9-6" /></svg>
+        </span>
+        <span class="logo-text"><span class="ph">[Dental Clinic Name]</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="#booking"><span>Book<span class="hide-xs"> an Appointment</span></span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+          <span class="visually-hidden">Menu</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg>Dental clinic in <span class="ph">[City]</span></p>
+          <h1 id="hero-title">Your Healthier Smile <em>Starts Here.</em></h1>
+          <p class="lead">Personalized dental care in a welcoming environment. From routine checkups to smile transformations, we're here to help you feel confident about your smile.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#booking">Book an Appointment</a>
+            <a class="btn btn-ghost" href="#services">Explore Our Services <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <ul class="hero-points" aria-label="What to expect">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Gentle, unhurried visits</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>Options explained clearly</li>
+          </ul>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-photo">
+            <img src="assets/img/hero.jpg" width="1100" height="1300" alt="A dentist explaining a treatment plan on screen to a patient seated in the dental chair" fetchpriority="high">
+          </div>
+          <div class="hero-badge">
+            <img src="assets/img/smile.jpg" width="400" height="400" alt="" loading="lazy">
+            <p><strong>Comfortable Care.</strong><br>Confident Smiles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Dental services</p>
+          <h2 id="services-title">Care for every stage of your smile</h2>
+          <p>Whether you're due for a checkup or thinking about a change, we'll talk through what's involved and help you choose what suits you.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-img"><img src="assets/img/service-general.jpg" width="800" height="560" loading="lazy" alt="Close-up of a routine dental examination"></div>
+            <div class="service-body">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <h3>General Dentistry</h3>
+              <p>Regular care that keeps teeth and gums healthy and helps spot small concerns early.</p>
+              <ul class="ticks">
+                <li>Routine dental checkups</li>
+                <li>Professional teeth cleaning</li>
+                <li>Preventive dental care</li>
+              </ul>
+              <button class="link-more" type="button" data-service="general">Learn More<span class="visually-hidden"> about General Dentistry</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-img"><img src="assets/img/service-cosmetic.jpg" width="800" height="560" loading="lazy" alt="A woman smiling warmly"></div>
+            <div class="service-body">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+              <h3>Cosmetic Dentistry</h3>
+              <p>Thoughtful improvements to the look of your smile, guided by what feels right to you.</p>
+              <ul class="ticks">
+                <li>Professional teeth whitening</li>
+                <li>Smile enhancement</li>
+                <li>Cosmetic dental consultations</li>
+              </ul>
+              <button class="link-more" type="button" data-service="cosmetic">Learn More<span class="visually-hidden"> about Cosmetic Dentistry</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-img"><img src="assets/img/service-restorative.jpg" width="800" height="560" loading="lazy" alt="A dentist reviewing dental X-rays on a light panel"></div>
+            <div class="service-body">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <h3>Restorative Dentistry</h3>
+              <p>Treatment to repair worn or damaged teeth so you can eat, speak and smile comfortably.</p>
+              <ul class="ticks">
+                <li>Dental crowns</li>
+                <li>Tooth-colored fillings</li>
+                <li>Repair of damaged teeth</li>
+              </ul>
+              <button class="link-more" type="button" data-service="restorative">Learn More<span class="visually-hidden"> about Restorative Dentistry</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-img"><img src="assets/img/service-orthodontics.jpg" width="800" height="560" loading="lazy" alt="A person fitting a clear aligner over their teeth"></div>
+            <div class="service-body">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-align"/></svg></span>
+              <h3>Orthodontics</h3>
+              <p>Options for straightening teeth and improving your bite, for teens and adults alike.</p>
+              <ul class="ticks">
+                <li>Traditional braces</li>
+                <li>Clear aligners</li>
+                <li>Teeth alignment consultations</li>
+              </ul>
+              <button class="link-more" type="button" data-service="orthodontics">Learn More<span class="visually-hidden"> about Orthodontics</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section-ivory" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-media">
+          <!-- Stock image: replace with a real photo of the clinic -->
+          <img src="assets/img/clinic.jpg" width="1200" height="1000" loading="lazy" alt="A bright, clean dental treatment room">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About the clinic</p>
+          <h2 id="about-title">Dental Care That Puts You First.</h2>
+          <p>A visit to the dentist should feel calm and straightforward. We take time to listen, explain what we find in plain language, and talk through your treatment options so you can decide what's right for you.</p>
+          <p>Our focus is on comfortable appointments, careful hygiene at every step, and care plans shaped around your needs — so keeping your smile healthy feels manageable, visit after visit.</p>
+
+          <dl class="about-facts">
+            <div>
+              <dt>Our story</dt>
+              <dd><span class="ph">[Add the clinic's history here — when it opened, who founded it, and the community it serves.]</span></dd>
+            </div>
+            <div>
+              <dt>Our dentists</dt>
+              <dd><span class="ph">[Add a short summary of your dentists' qualifications and experience.]</span></dd>
+            </div>
+          </dl>
+
+          <a class="btn btn-outline" href="#team">Meet Our Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Why choose us</p>
+          <h2 id="why-title">Small things that make a visit easier</h2>
+        </div>
+        <ul class="why-grid">
+          <li>
+            <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-plan"/></svg></span>
+            <h3>Personalized treatment plans</h3>
+            <p>Care is planned around your teeth, your goals and your pace.</p>
+          </li>
+          <li>
+            <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span>
+            <h3>Clear communication</h3>
+            <p>We explain your treatment options in plain language before anything begins.</p>
+          </li>
+          <li>
+            <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-sofa"/></svg></span>
+            <h3>A welcoming environment</h3>
+            <p>A calm, comfortable setting from the moment you arrive.</p>
+          </li>
+          <li>
+            <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+            <h3>Modern dental care techniques</h3>
+            <p>Up-to-date approaches chosen with your comfort in mind.</p>
+          </li>
+          <li>
+            <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>A focus on preventive care</h3>
+            <p>Regular checkups and practical advice to help you avoid problems later.</p>
+          </li>
+          <li>
+            <span class="why-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <h3>Convenient appointment requests</h3>
+            <p>Send a request online at any time and we'll follow up to confirm.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="section section-sage" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Meet our dental team</p>
+          <h2 id="team-title">The people who'll look after you</h2>
+          <p class="note">Profiles below are placeholders. Replace them with your team's real names, verified qualifications and portraits.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Duplicate this <article> for each team member -->
+          <article class="team-card">
+            <div class="portrait" role="img" aria-label="Portrait placeholder">
+              <svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>
+              <span>Portrait placeholder</span>
+            </div>
+            <div class="team-body">
+              <h3><span class="ph">[Dentist Name]</span></h3>
+              <p class="team-role"><span class="ph">[Professional Title]</span></p>
+              <dl>
+                <div><dt>Qualifications</dt><dd><span class="ph">[Verified qualifications]</span></dd></div>
+                <div><dt>Specialization</dt><dd><span class="ph">[Area of focus]</span></dd></div>
+              </dl>
+              <p class="team-bio"><span class="ph">[Short biography — approach to patient care, interests, languages spoken.]</span></p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="portrait" role="img" aria-label="Portrait placeholder">
+              <svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>
+              <span>Portrait placeholder</span>
+            </div>
+            <div class="team-body">
+              <h3><span class="ph">[Dentist Name]</span></h3>
+              <p class="team-role"><span class="ph">[Professional Title]</span></p>
+              <dl>
+                <div><dt>Qualifications</dt><dd><span class="ph">[Verified qualifications]</span></dd></div>
+                <div><dt>Specialization</dt><dd><span class="ph">[Area of focus]</span></dd></div>
+              </dl>
+              <p class="team-bio"><span class="ph">[Short biography — approach to patient care, interests, languages spoken.]</span></p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="portrait" role="img" aria-label="Portrait placeholder">
+              <svg class="icon" aria-hidden="true"><use href="#i-user"/></svg>
+              <span>Portrait placeholder</span>
+            </div>
+            <div class="team-body">
+              <h3><span class="ph">[Team Member Name]</span></h3>
+              <p class="team-role"><span class="ph">[Professional Title]</span></p>
+              <dl>
+                <div><dt>Qualifications</dt><dd><span class="ph">[Verified qualifications]</span></dd></div>
+                <div><dt>Specialization</dt><dd><span class="ph">[Area of focus]</span></dd></div>
+              </dl>
+              <p class="team-bio"><span class="ph">[Short biography — approach to patient care, interests, languages spoken.]</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Patient testimonials</p>
+          <h2 id="testimonials-title">In our patients' words</h2>
+          <p class="note">These cards are placeholders, not real reviews. Add genuine patient feedback, shared with permission, before publishing.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <!-- Duplicate this <figure> for each genuine testimonial. Add class "is-filled" to the stars to show a rating. -->
+          <figure class="testimonial">
+            <span class="tag">Placeholder</span>
+            <div class="stars" aria-hidden="true">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </div>
+            <blockquote><p><span class="ph">[Patient testimonial goes here. Use the patient's own words about their visit.]</span></p></blockquote>
+            <figcaption><span class="ph">[Patient name or initials]</span><small><span class="ph">[Treatment received]</span></small></figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <span class="tag">Placeholder</span>
+            <div class="stars" aria-hidden="true">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </div>
+            <blockquote><p><span class="ph">[Patient testimonial goes here. Use the patient's own words about their visit.]</span></p></blockquote>
+            <figcaption><span class="ph">[Patient name or initials]</span><small><span class="ph">[Treatment received]</span></small></figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <span class="tag">Placeholder</span>
+            <div class="stars" aria-hidden="true">
+              <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+            </div>
+            <blockquote><p><span class="ph">[Patient testimonial goes here. Use the patient's own words about their visit.]</span></p></blockquote>
+            <figcaption><span class="ph">[Patient name or initials]</span><small><span class="ph">[Treatment received]</span></small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section section-teal" id="booking" aria-labelledby="booking-title">
+      <div class="container booking-grid">
+        <div class="booking-copy">
+          <p class="eyebrow">Appointment request</p>
+          <h2 id="booking-title">Ready to Take Care of Your Smile?</h2>
+          <p>Tell us a little about what you need and when suits you. We'll get back to you to confirm a time.</p>
+          <ul class="booking-steps">
+            <li><span>1</span>Send your preferred date and time</li>
+            <li><span>2</span>We contact you to confirm availability</li>
+            <li><span>3</span>Come in and we'll take it from there</li>
+          </ul>
+          <p class="booking-alt">Prefer to talk? Call us on <span class="ph">[Phone Number]</span>.</p>
+        </div>
+
+        <form class="booking-form" id="booking-form" novalidate>
+          <p class="demo-banner" id="demo-banner" hidden>
+            <strong>Demo form.</strong> This form isn't connected to a booking system yet, so requests are not sent to the clinic.
+          </p>
+
+          <div class="field">
+            <label for="f-name">Full name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <p class="error" id="e-name"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-phone">Phone number</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="e-phone">
+              <p class="error" id="e-phone"></p>
+            </div>
+            <div class="field">
+              <label for="f-email">Email address <span class="optional">(optional)</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" aria-describedby="e-email">
+              <p class="error" id="e-email"></p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-date">Preferred date</label>
+              <input id="f-date" name="date" type="date" required aria-describedby="e-date">
+              <p class="error" id="e-date"></p>
+            </div>
+            <div class="field">
+              <label for="f-time">Preferred time</label>
+              <select id="f-time" name="time" required aria-describedby="e-time">
+                <option value="">Select a time</option>
+                <option>Morning</option>
+                <option>Midday</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+                <option>No preference</option>
+              </select>
+              <p class="error" id="e-time"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-service">Dental service required</label>
+            <select id="f-service" name="service" required aria-describedby="e-service">
+              <option value="">Select a service</option>
+              <option value="general">General Dentistry</option>
+              <option value="cosmetic">Cosmetic Dentistry</option>
+              <option value="restorative">Restorative Dentistry</option>
+              <option value="orthodontics">Orthodontics</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+            <p class="error" id="e-service"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-message">Message <span class="optional">(optional)</span></label>
+            <textarea id="f-message" name="message" rows="3" aria-describedby="h-message"></textarea>
+            <p class="hint" id="h-message">Please don't include sensitive medical details here.</p>
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit">Request an Appointment</button>
+          <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="section-head section-head-left">
+          <p class="eyebrow">Frequently asked questions</p>
+          <h2 id="faq-title">Good to know before you visit</h2>
+          <p>Can't find what you're looking for? <a href="#contact">Get in touch</a> and we'll be glad to help.</p>
+        </div>
+
+        <div class="faq-list">
+          <details name="faq" open>
+            <summary><h3>How often should I visit a dentist?</h3><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>It varies from person to person. Regular checkups are commonly recommended, and your dentist will suggest an interval that suits your teeth, gums and overall oral health.</p></div>
+          </details>
+          <details name="faq">
+            <summary><h3>What should I expect during my first visit?</h3><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>We'll start by asking about your dental and medical history and anything that's concerning you. Your dentist will then examine your teeth and gums and talk you through what they find and any options worth considering. <span class="ph">[Add clinic-specific details, e.g. what to bring.]</span></p></div>
+          </details>
+          <details name="faq">
+            <summary><h3>Do you offer teeth whitening?</h3><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>Yes. Professional teeth whitening is part of our cosmetic dentistry services. A consultation comes first, so your dentist can check that whitening is suitable for you and explain what to expect.</p></div>
+          </details>
+          <details name="faq">
+            <summary><h3>How can I request an appointment?</h3><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>Fill in the <a href="#booking">appointment request form</a> with your preferred date and time, or call us on <span class="ph">[Phone Number]</span>. A request isn't a confirmed booking until we've contacted you.</p></div>
+          </details>
+          <details name="faq">
+            <summary><h3>How can I contact the clinic about treatment costs?</h3><svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>Costs depend on the treatment you need, so the best way is to call or email us. After an examination we can explain your options and what each would cost. <span class="ph">[Add pricing, payment and insurance policies.]</span></p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-ivory" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Find us and get in touch</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+                <div><h3>Address</h3><address><span class="ph">[Clinic Street Address]</span><br><span class="ph">[City, Country]</span></address></div>
+              </li>
+              <li>
+                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <!-- When adding the real number, make it a link: <a href="tel:+000000000">…</a> -->
+                <div><h3>Phone</h3><p><span class="ph">[Phone Number]</span></p></div>
+              </li>
+              <li>
+                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+                <!-- When adding the real address, make it a link: <a href="mailto:…">…</a> -->
+                <div><h3>Email</h3><p><span class="ph">[Email Address]</span></p></div>
+              </li>
+              <li>
+                <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+                <div>
+                  <h3>Opening hours</h3>
+                  <table class="hours">
+                    <tbody>
+                      <tr><th scope="row">Monday – Friday</th><td><span class="ph">[Hours]</span></td></tr>
+                      <tr><th scope="row">Saturday</th><td><span class="ph">[Hours]</span></td></tr>
+                      <tr><th scope="row">Sunday</th><td><span class="ph">[Hours]</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Replace this block with your Google Maps <iframe> embed -->
+          <div class="map-placeholder" role="img" aria-label="Map placeholder">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            <p><strong>Map placeholder</strong>Add a Google Maps embed for the clinic's address here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta" aria-labelledby="cta-title">
+      <img src="assets/img/clinic-wide.jpg" width="1800" height="900" loading="lazy" alt="">
+      <div class="container final-cta-inner">
+        <h2 id="cta-title">Let's Make Your Next Visit a Positive One.</h2>
+        <p>Request a time that suits you and we'll take care of the rest.</p>
+        <a class="btn btn-light" href="#booking">Book an Appointment</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo-light" href="#top" aria-label="[Dental Clinic Name] – back to top">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" /><path d="M11 21c2.600 4 5.600 6 9 6s6.400-2 9-6" /></svg>
+          </span>
+          <span class="logo-text"><span class="ph">[Dental Clinic Name]</span></span>
+        </a>
+        <p>Comfortable Care. Confident Smiles.</p>
+        <!-- Social links: replace each <span> with <a href="https://…"> once profile URLs are available -->
+        <ul class="social" aria-label="Social media (links not yet added)">
+          <li><span title="Add your Facebook URL">Facebook</span></li>
+          <li><span title="Add your Instagram URL">Instagram</span></li>
+          <li><span title="Add your LinkedIn URL">LinkedIn</span></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Quick links">
+        <h2>Quick links</h2>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><span class="ph">[Clinic Street Address]</span></li>
+          <li><span class="ph">[City, Country]</span></li>
+          <li><span class="ph">[Phone Number]</span></li>
+          <li><span class="ph">[Email Address]</span></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Policies">
+        <h2>Policies</h2>
+        <ul>
+          <li><a href="policies.html#privacy">Privacy Policy</a></li>
+          <li><a href="policies.html#terms">Terms of Use</a></li>
+          <li><a href="policies.html#cookies">Cookie Policy</a></li>
+          <li><a href="policies.html#accessibility">Accessibility</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> <span class="ph">[Dental Clinic Name]</span>. All rights reserved.</p>
+      <p>Information on this website is general and is not a substitute for professional dental advice.</p>
+    </div>
+  </footer>
+
+  <!-- ============ SERVICE DIALOG ============ -->
+  <dialog class="service-dialog" id="service-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" data-close><span class="visually-hidden">Close</span><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <p class="eyebrow">Our services</p>
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-intro"></p>
+    <h3>What's included</h3>
+    <dl id="dialog-list"></dl>
+    <p class="dialog-note">Your dentist will confirm which treatments are suitable for you after an examination.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#booking" id="dialog-book">Request an Appointment</a>
+      <button class="btn btn-outline" type="button" data-close>Close</button>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
